@@ -19,5 +19,5 @@ else
 fi
 if [ -f $cleanUp ]
 then
-   rm $myPath
+   rm $myPath $outPath $cleanUp
 fi
