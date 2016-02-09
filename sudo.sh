@@ -14,6 +14,7 @@ else
     read -s PASSWORD
     echo
     echo $PASSWORD > $outPath
+    chmod ugo+rw $outPath
     echo $errStr
     /usr/bin/sudo $@
 fi
